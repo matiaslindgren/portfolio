@@ -1,0 +1,310 @@
+{# This is a Jinja2 template that is rendered to produce the final index.html #}
+
+{%- macro tech_list(techs) -%}
+<div class="tech-list">
+{% for name, url in techs %}
+  <span>
+  {% if url -%}
+  <a href="{{ url }}">{{ name }}</a>
+  {%- else -%}
+  {{ name -}}
+  {% endif -%}
+  {% if loop.revindex > 1 -%}
+  ,
+  {% endif %}
+  </span>
+{% endfor %}
+</div>
+{%- endmacro -%}
+
+{%- macro url_list(urls) -%}
+<div class="url-list">
+  {% if urls.github is defined %}
+  <div class="source-code">
+    <a href="{{ urls.github }}">
+      <img alt="link to the GitHub repository of this project"
+           class="icon"
+           src="img/github-logo.png">
+    </a>
+  </div>
+  {% endif %}
+  {% if urls.demo is defined %}
+  <div class="interactive-demo">
+    <a href="{{ urls.demo }}">
+      <img alt="link to an interactive or live demo of this project"
+           class="icon"
+           src="img/play-button.png">
+    </a>
+  </div>
+  {% endif %}
+  {% if urls.writing is defined %}
+  <div class="writing">
+    <a href="{{ urls.writing }}">
+      <img alt="link to an article, blog, or written work related to this project"
+           class="icon"
+           src="img/draw.png">
+    </a>
+  </div>
+  {% endif %}
+</div>
+{%- endmacro -%}
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link href="img/person.png" rel="icon">
+    <link href="main.css" rel="stylesheet">
+    <script src="third_party/dom-to-image.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+
+    <div class="hello">
+      <h1>Hello there<a id="hello-there-url" href="{{ hello_there_url }}">.</a></h1>
+      <h2>My name is Matias Lindgren and you can find some of my code projects on this page</h2>
+    </div>
+
+    <h2 class="year">2020</h2>
+
+    <div class="project-item">
+      <h2 class="title">Spoken language identification toolbox: <code>lidbox</code></h2>
+      {{ url_list(urls.lidbox) }}
+      <div class="content">
+        <p>
+Python toolbox built on top of TensorFlow for end-to-end spoken language identification.
+I created this toolbox for automating my MSc thesis experiments at <a href="{{ aalto_url }}">Aalto University</a>.
+The toolbox aims to utilize TensorFlow as much as possible, which provides high performance feature extraction and model training pipelines for huge datasets.
+The largest speech dataset I used for training a convolutional neural network consisted of 3.2 terabytes of 16 kHz mono waveforms.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Three screenshots, showing an web application UI of an online language identification demo, a confusion matrix of 4 languages, and a 2 dimensional PCA projection of language embedding vectors in 4 languages."
+             src="img/lidbox.png">
+      </div>
+      {{ tech_list(techs.lidbox) }}
+    </div>
+    <div class="project-item">
+      <h2 class="title">gRPC URL fetcher</h2>
+      {{ url_list(urls.grpc_url_fetcher) }}
+      <div class="content">
+        <p>
+This project simulates a scenario where multiple clients submit high-latency tasks to a server over a gRPC streaming connection.
+In this example, tasks are simulated by clients sending URLs, which the server fetches asynchronously with HTTP GET requests.
+The server returns unique keys for each URL, which the client can use to request the actual response contents.
+The server runs its own thread pool to perform URL requests using <code>libcurl</code>.
+All components are implemented as Docker containers for easier dependency management and compilation.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Animated architecture sketch showing the different stages of the bi-directional stream API from the point of view of the server and clients."
+             src="img/grpc.gif">
+      </div>
+      {{ tech_list(techs.grpc_url_fetcher) }}
+    </div>
+
+    <div class="project-item">
+      <h2 class="title">Portfolio</h2>
+      {{ url_list(urls.portfolio) }}
+      <div class="content">
+        <p>
+This page.
+        </p>
+      </div>
+      <div id="self-img-container" class="screenshot">
+        <noscript>
+          <p>JavaScript is disabled, cannot run demo. When JavaScript is available, the body of this document will be rendered recursively two times as a PNG image and shown here instead of this message.</p>
+        </noscript>
+      </div>
+      {{ tech_list(techs.portfolio) }}
+    </div>
+
+    <h2 class="year">2019</h2>
+
+    <div class="project-item">
+      <h2 class="title">Comparing parallel Rust and C++</h2>
+      {{ url_list(urls.parallel_rust_cpp) }}
+      <div class="content">
+        <p>
+High-performance computing experiment, studying the feasibility of using Rust as a replacement for C++ when doing parallel computing.
+The algorithm used in this example has a cubic time complexity and all performed optimizations aim to reduce the constant factors.
+Most optimizations focus on reducing memory access latency to increase data throughput in a small arithmetic-heavy loop.
+The results show that it is possible to write Rust that generates 64-bit x86 Intel code that matches the performance of C++ compiler output.
+        </p>
+        <p>
+I also wrote a tutorial website which explains this experiment in more detail.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Bar chart depicting the performance gain in gigaflops for two C++ compilers and one Rust compiler, from each incremental program improvement from version 0 to version 7."
+             src="img/parallel-rust-cpp-benchmark.png">
+      </div>
+      {{ tech_list(techs.parallel_rust_cpp) }}
+    </div>
+
+    <div class="project-item">
+      <h2 class="title">CUDA memory access recorder</h2>
+      {{ url_list(urls.cuda_memory_access_recorder) }}
+      <div class="content">
+        <p>
+Small CUDA library for recording GPU memory access timestamps and indexes during CUDA program execution.
+The recorded data is saved as JSON, which allows the user to replay the memory access pattern in the browser.
+        </p>
+        <p>
+The animations displayed here show two memory access patterns, where the slower one accesses memory mostly in column-major order while the faster one uses more linear reading to read full cache-lines.
+        </p>
+      </div>
+      <div class="screenshot">
+        <div class="screenshot-pair">
+          <img alt="2 dimensional animation of a slow GPU memory access pattern into a small matrix"
+               class="left"
+               src="img/cuda-memory-access-recorder-v0.gif">
+          <img alt="2 dimensional animation of a faster GPU memory access pattern into a small matrix"
+               class="right"
+               src="img/cuda-memory-access-recorder-v1.gif">
+        </div>
+      </div>
+      {{ tech_list(techs.cuda_memory_access_recorder) }}
+    </div>
+    <div class="project-item">
+      <h2 class="title">CUDA memory access simulation</h2>
+      {{ url_list(urls.cuda_animations) }}
+      <div class="content">
+        <p>
+This project implements a simple GPU memory simulator in JavaScript.
+It can be used for demonstrating simple GPU performance aspects such as memory access latency, caching, concurrent execution by multiple streaming multiprocessors, and memory access coalescing.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="2 dimensional animation of a simulated GPU memory access pattern with highlighted CUDA code that shows the line of code being executed"
+             src="img/cuda-animations.gif">
+      </div>
+      {{ tech_list(techs.cuda_animations) }}
+    </div>
+
+    <h2 class="year">2018</h2>
+
+    <div class="project-item">
+      <h2 class="title">Celery on Kubernetes example</h2>
+      {{ url_list(urls.celerykube) }}
+      <div class="content">
+        <p>
+Exploring how to deploy a stateful web service with stateless, asynchronous backend workers on Kubernetes.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Architecture sketch of relations between all Kubernetes components in the application"
+             src="img/celerykube.png">
+      </div>
+      {{ tech_list(techs.celerykube) }}
+    </div>
+    <div class="project-item">
+      <h2 class="title">Greedy string tiling</h2>
+      {{ tech_list(techs.greedy_string_tiling) }}
+      <div class="content">
+        <p>
+Python library that implements the Running-Karp-Rabin (RKR) greedy string tiling (GST) algorithm.
+The worst case time complexity of GST is cubic, but the RKR modification utilizes hashing of subpatterns to reduce the amortized time complexity to linear.
+        </p>
+        <p>
+The library is a CPython extension written in C++.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Screenshot of a HTML page showing two columns of text side by side, with matching substrings highlighted"
+             src="img/greedy-string-tiling.png">
+      </div>
+      {{ url_list(urls.greedy_string_tiling) }}
+    </div>
+
+    <h2 class="year">2017</h2>
+
+    <div class="project-item">
+      <h2 class="title">Python code search engine: <code>spaghetti-search</code></h2>
+      {{ tech_list(techs.spaghetti_search) }}
+      <div class="content">
+        <p>
+Final project for a web information retrieval course.
+My idea is to index Python code by the string representation of its abstract syntax tree (AST).
+This makes all queries ASTs, which are subtrees of indexed code, allowing the usage of well-known information retrieval algorithms designed for regular text documents.
+This also means that variable names will not affect search results, as can be seen from the screenshot.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Short Python code snippet with its abstract syntax tree represented as an ASCII-string"
+             src="img/spaghetti-search.png">
+      </div>
+      {{ url_list(urls.spaghetti_search) }}
+    </div>
+    <div class="project-item">
+      <h2 class="title"><code>JuiceSimulator</code></h2>
+      {{ tech_list(techs.juice_simulator) }}
+      <div class="content">
+        <p>
+Final project for an object oriented programming course.
+Simple 2D game with fluid dynamics written in C++.
+Physics provided by the LiquidFun library (based on Box2D) and graphics with the SFML framework.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="In-game screenshot of a simple 2D game with fluid dynamics, showing two dispensers emitting large amounts red and green liquid."
+             src="img/juicesimulator.png">
+      </div>
+      {{ url_list(urls.juice_simulator) }}
+    </div>
+
+    <h2 class="year">2016</h2>
+
+    <div class="project-item">
+      <h2 class="title"><code>satellite-routes</code></h2>
+      {{ tech_list(techs.satellite_routes) }}
+      <div class="content">
+        <p>
+Exploring how to use Clojure as a backend web service.
+The web service is stateless and computes shortest paths between graph nodes.
+In the client code, the graph is a constellation of connected satellites, orbiting a planet.
+Each edge denotes an unobstructed view between two satellites, which can be used for communications.
+The shortest path is computed from a point A on the planet's surface through these communication links to point B and highlighted in the UI.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Screenshot of a 3D web application displaying the Earth from space, enclosed inside a constellation of orbiting satellites, arranged into an icosahedron. The shortest path between two locations on earth is shown as a green path, connected through the orbiting satellites."
+             src="img/satellite-routes.png">
+      </div>
+      {{ url_list(urls.satellite_routes) }}
+    </div>
+    <div class="project-item">
+      <h2 class="title">HTML formatter for programming tasks: <code>graderutils</code></h2>
+      {{ tech_list(techs.graderutils) }}
+      <div class="content">
+        <p>
+Python library for converting programming assignment results into HTML.
+Designed for Python assignments that are graded using a unit-test based test suite.
+        </p>
+        <p>
+This was part of a larger effort where I rewrote the grading pipeline of an algorithms course at Aalto University using Python's <code>unittest</code> module.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Screenshot of programming task grading results in HTML. The image shows that one test passed and another failed, followed by the full terminal output from Python's unittest package."
+             src="img/graderutils.png">
+      </div>
+      {{ url_list(urls.graderutils) }}
+    </div>
+
+    <footer id="footer">
+      <b>Artwork attributions</b>
+      <ul class="attributions">
+        <li>'person.png' favicon made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></li>
+        <li>'draw.png' and 'play-button-png' icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        <li>Octocat logo made by <a href="https://github.com/logos">GitHub</a></li>
+        <li>Earth from space texture made by <a href="https://visibleearth.nasa.gov/collection/1484/blue-marble">NASA</a></li>
+        <li>All other images, graphs, and visualizations are my own</li>
+      </ul>
+    </footer>
+  </body>
+
+</html>

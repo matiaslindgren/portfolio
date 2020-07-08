@@ -1,0 +1,154 @@
+:root {
+  --project-item-max-height: 800px;
+}
+
+h1, h2, h3, h4, h5, p, a {
+  font-family: Gill Sans, Gill Sans MT, sans-serif;
+  color: #222;
+}
+
+footer {
+  margin-top: 5em;
+  padding: 1em;
+  background: #eee;
+}
+
+.hello {
+  margin-top: 6em;
+  margin-bottom: 10em;
+}
+.hello h1 {
+  font-size: 4em;
+  margin-bottom: 1em;
+}
+
+h2.year {
+  font-size: 3em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  width: 100%;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+img.icon {
+  max-height: 35px;
+}
+
+
+.project-item > .title {
+  grid-area: title;
+  margin-top: 0;
+}
+
+.project-item > .url-list {
+  grid-area: url-list;
+  display: grid;
+  grid-template-columns: repeat(3, 40px) auto;
+  grid-template-areas:
+    "src demo video .";
+}
+.project-item > .url-list div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-item > .url-list > .source-code {
+  grid-area: src;
+}
+.project-item > .url-list > .interactive-demo {
+  grid-area: demo;
+}
+.project-item > .url-list > .recording {
+  grid-area: video;
+}
+
+.project-item > .screenshot {
+  grid-area: screenshot;
+}
+
+.project-item > .screenshot-pair > .left {
+  grid-area: left;
+}
+.project-item > .screenshot-pair > .right {
+  grid-area: right;
+}
+.project-item > .screenshot-pair {
+  grid-area: screenshot;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  "left right";
+}
+
+.project-item > .content {
+  grid-area: content;
+  margin-bottom: 1em;
+}
+.project-item > .content p {
+  font-size: large;
+}
+
+.project-item > .tech-list {
+  grid-area: tech-list;
+  background: #eee;
+  padding: 0.5em;
+}
+.project-item > .tech-list span {
+  font-size: 1.5em;
+}
+
+.project-item {
+  max-height: var(--project-item-max-height);
+  margin-bottom: 3em;
+  border: 0.4em solid #444;
+  padding: 10px;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 40px auto fit-content(40px) 1fr;
+  grid-template-areas:
+    "title screenshot"
+    "url-list screenshot"
+    "content screenshot"
+    "tech-list screenshot"
+    ". screenshot"
+}
+
+
+#self-img-container {
+  height: var(--project-item-max-height);
+  border: 2px solid #666;
+  overflow: scroll;
+}
+
+#self-img-container noscript {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 1em;
+}
+#self-img-container noscript p {
+  font-size: 1.5em;
+}
+
+#self-img-container img {
+  max-height: none;
+}
+
+
+#hello-there-url {
+  opacity: 0;
+}
+
+progress {
+  min-width: 100%;
+}

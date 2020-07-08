@@ -1,0 +1,123 @@
+techs:
+  cuda_animations:
+  - - C++14
+    - ''
+  - - CUDA
+    - https://docs.nvidia.com/cuda/archive/10.1/
+  - - JavaScript
+    - ''
+  - - HTML5
+    - ''
+  cuda_memory_access_recorder:
+  - - C++14
+    - ''
+  - - CUDA
+    - https://docs.nvidia.com/cuda/archive/10.1/
+  - - JavaScript
+    - ''
+  - - HTML5
+    - ''
+  grpc_url_fetcher:
+  - - C++17
+    - ''
+  - - gRPC
+    - https://grpc.io/about/
+  - - libcurl
+    - https://curl.haxx.se/libcurl/
+  lidbox:
+  - - Python
+    - https://docs.python.org/3.8/
+  - - TensorFlow
+    - https://www.tensorflow.org/api/r2.2
+  parallel_rust_cpp:
+  - - C++17
+    - ''
+  - - Rust
+    - https://github.com/rust-lang/rust/tree/1.37.0
+  portfolio:
+  - - Jinja2
+    - https://jinja.palletsprojects.com/en/2.11.x/
+  - - HTML5
+    - ''
+  - - CSS
+    - ''
+  - - JavaScript
+    - ''
+  celerykube:
+  - - Python
+    - https://docs.python.org/3.8/
+  - - Minikube
+    - https://github.com/kubernetes/minikube/tree/v1.11.0
+  - - Docker
+    - https://github.com/docker/cli/tree/v19.03.12
+  - - Flask
+    - https://flask.palletsprojects.com/en/1.1.x/
+  - - Celery
+    - https://docs.celeryproject.org/en/v4.4.6/
+  spaghetti_search:
+  - - Python
+    - https://docs.python.org/3.6/
+  - - Flask
+    - https://flask.palletsprojects.com/en/0.12.x/
+  - - Scrapy
+    - https://docs.scrapy.org/en/1.4/
+  - - Whoosh
+    - https://whoosh.readthedocs.io/en/latest/intro.html
+  satellite_routes:
+  - - Clojure
+    - https://github.com/clojure/clojure/tree/clojure-1.8.0
+  - - ThreeJS
+    - https://github.com/mrdoob/three.js/tree/r76
+  juice_simulator:
+  - - C++11
+    - ''
+  - - LiquidFun
+    - https://google.github.io/liquidfun/
+  - - SFML
+    - https://www.sfml-dev.org/
+  graderutils:
+  - - Python
+    - https://docs.python.org/3.5/
+  - - HTML
+    - ''
+  greedy_string_tiling:
+  - - C++14
+    - ''
+  - - Python
+    - https://docs.python.org/3.6/
+
+
+urls:
+  cuda_memory_access_recorder:
+    github: https://github.com/matiaslindgren/cuda-memory-access-recorder
+  cuda_animations:
+    github: https://github.com/matiaslindgren/cuda-animations
+    demo: https://matiaslindgren.github.io/cuda-animations
+  grpc_url_fetcher:
+    github: https://github.com/matiaslindgren/grpc-url-fetcher
+  lidbox:
+    github: https://github.com/matiaslindgren/lidbox
+    demo: https://users.aalto.fi/~lindgrm1/lid-demo/
+    writing: http://urn.fi/URN:NBN:fi:aalto-202006213891
+  parallel_rust_cpp:
+    github: https://github.com/parallel-rust-cpp/shortcut-comparison
+    writing: https://parallel-rust-cpp.github.io/
+  portfolio:
+    github: https://github.com/matiaslindgren/portfolio-webpage
+    demo: .
+  celerykube:
+    github: https://github.com/matiaslindgren/celery-kubernetes-example
+  spaghetti_search:
+    github: https://github.com/matiaslindgren/spaghetti-search
+  satellite_routes:
+    github: https://github.com/matiaslindgren/satellite-routes
+    demo: http://satellite-thing.herokuapp.com/
+  juice_simulator:
+    github: https://github.com/matiaslindgren/JuiceSimulator
+  graderutils:
+    github: https://github.com/Aalto-LeTech/python-grader-utils
+  greedy_string_tiling:
+    github: https://github.com/Aalto-LeTech/greedy-string-tiling
+
+aalto_url: https://www.aalto.fi/en
+hello_there_url: https://www.youtube.com/watch?v=eaEMSKzqGAg
