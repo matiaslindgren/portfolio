@@ -54,8 +54,9 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
-    <link href="img/person.png" rel="icon">
+    <link href="img/man.png" rel="icon">
     <link href="main.css" rel="stylesheet">
     <script src="third_party/dom-to-image.min.js"></script>
     <script src="main.js"></script>
@@ -65,10 +66,11 @@
 
     <div class="hello">
       <h1>Hello there<a id="hello-there-url" href="{{ hello_there_url }}">.</a></h1>
-      <h2>My name is Matias Lindgren and you can find some of my code projects on this page</h2>
+      <p>My name is Matias Lindgren and you can find some of my code projects on this page</p>
+      <p>Email: matias.lindgren@iki.fi</p>
     </div>
 
-    <h2 class="year">2020</h2>
+    <h1 class="year">2020</h1>
 
     <div class="project-item">
       <h2 class="title">Spoken language identification toolbox: <code>lidbox</code></h2>
@@ -122,7 +124,7 @@ This page.
       {{ tech_list(techs.portfolio) }}
     </div>
 
-    <h2 class="year">2019</h2>
+    <h1 class="year">2019</h1>
 
     <div class="project-item">
       <h2 class="title">Comparing parallel Rust and C++</h2>
@@ -185,7 +187,7 @@ It can be used for demonstrating simple GPU performance aspects such as memory a
       {{ tech_list(techs.cuda_animations) }}
     </div>
 
-    <h2 class="year">2018</h2>
+    <h1 class="year">2018</h1>
 
     <div class="project-item">
       <h2 class="title">Celery on Kubernetes example</h2>
@@ -220,7 +222,7 @@ The library is a CPython extension written in C++.
       {{ url_list(urls.greedy_string_tiling) }}
     </div>
 
-    <h2 class="year">2017</h2>
+    <h1 class="year">2017</h1>
 
     <div class="project-item">
       <h2 class="title">Python code search engine: <code>spaghetti-search</code></h2>
@@ -256,7 +258,7 @@ Physics provided by the LiquidFun library (based on Box2D) and graphics with the
       {{ url_list(urls.juice_simulator) }}
     </div>
 
-    <h2 class="year">2016</h2>
+    <h1 class="year">2016</h1>
 
     <div class="project-item">
       <h2 class="title"><code>satellite-routes</code></h2>
@@ -298,10 +300,11 @@ This was part of a larger effort where I rewrote the grading pipeline of an algo
     <footer id="footer">
       <b>Artwork attributions</b>
       <ul class="attributions">
-        <li>'person.png' favicon made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></li>
-        <li>'draw.png' and 'play-button-png' icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        <li>"man.png" favicon made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from {{ flaticon_link }}</li>
+        <li>"draw.png" and "play-button.png" icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from {{ flaticon_link }}</li>
         <li>Octocat logo made by <a href="https://github.com/logos">GitHub</a></li>
         <li>Earth from space texture made by <a href="https://visibleearth.nasa.gov/collection/1484/blue-marble">NASA</a></li>
+        <li>{{ roboto_font_link}} font made by Christian Robertson, licensed under {{ apache_2_license_link }}</li>
         <li>All other images, graphs, and visualizations are my own</li>
       </ul>
     </footer>

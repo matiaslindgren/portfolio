@@ -1,4 +1,5 @@
 *.py[co]
 build
+fonts
 node_modules
 package-lock.json

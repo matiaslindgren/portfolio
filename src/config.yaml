@@ -121,3 +121,6 @@ urls:
 
 aalto_url: https://www.aalto.fi/en
 hello_there_url: https://www.youtube.com/watch?v=eaEMSKzqGAg
+apache_2_license_link: '<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a>'
+flaticon_link: '<a href="https://www.flaticon.com/" title="Flaticon">flaticon</a>'
+roboto_font_link: '<a href="https://fonts.google.com/specimen/Roboto+Slab">"Roboto Slab"</a>'

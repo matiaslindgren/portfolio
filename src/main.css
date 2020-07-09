@@ -1,10 +1,12 @@
-:root {
-  --project-item-max-height: 800px;
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url(/fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 
-h1, h2, h3, h4, h5, p, a {
-  font-family: Gill Sans, Gill Sans MT, sans-serif;
+body {
+  font-family: 'Roboto Slab', Roboto, sans-serif;
   color: #222;
+  font-size: 1.5em;
 }
 
 footer {
@@ -17,13 +19,8 @@ footer {
   margin-top: 6em;
   margin-bottom: 10em;
 }
-.hello h1 {
-  font-size: 4em;
-  margin-bottom: 1em;
-}
 
-h2.year {
-  font-size: 3em;
+.year {
   margin-top: 3em;
   margin-bottom: 1em;
   width: 100%;
@@ -44,7 +41,6 @@ img.icon {
 
 .project-item > .title {
   grid-area: title;
-  margin-top: 0;
 }
 
 .project-item > .url-list {
@@ -69,8 +65,24 @@ img.icon {
   grid-area: video;
 }
 
-.project-item > .screenshot {
-  grid-area: screenshot;
+@media screen and (max-width: 999px) {
+  .project-item > .screenshot {
+    grid-area: screenshot;
+    display: flex;
+    justify-content: center;
+  }
+  #self-img-container {
+    height: 400px;
+    display: unset;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .project-item > .screenshot {
+    grid-area: screenshot;
+  }
+  #self-img-container {
+    height: 800px;
+  }
 }
 
 .project-item > .screenshot-pair > .left {
@@ -89,10 +101,6 @@ img.icon {
 
 .project-item > .content {
   grid-area: content;
-  margin-bottom: 1em;
-}
-.project-item > .content p {
-  font-size: large;
 }
 
 .project-item > .tech-list {
@@ -100,30 +108,41 @@ img.icon {
   background: #eee;
   padding: 0.5em;
 }
-.project-item > .tech-list span {
-  font-size: 1.5em;
+
+.project-item * {
+  margin: 0;
 }
 
 .project-item {
-  max-height: var(--project-item-max-height);
-  margin-bottom: 3em;
-  border: 0.4em solid #444;
-  padding: 10px;
   display: grid;
-  grid-column-gap: 10px;
-  grid-template-columns: 1fr 2fr;
+  border: 0.4em solid #444;
+  margin-bottom: 3em;
+  padding: 1em 0.5em 1em 0.5em;
+  grid-row-gap: 10px;
   grid-template-rows: auto 40px auto fit-content(40px) 1fr;
   grid-template-areas:
-    "title screenshot"
-    "url-list screenshot"
-    "content screenshot"
-    "tech-list screenshot"
-    ". screenshot"
+    "title"
+    "url-list"
+    "content"
+    "screenshot"
+    "tech-list"
+}
+@media screen and (min-width: 1000px) {
+  .project-item {
+    grid-column-gap: 10px;
+    grid-template-rows: auto 40px auto fit-content(40px) 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "title screenshot"
+      "url-list screenshot"
+      "content screenshot"
+      "tech-list screenshot"
+      ". screenshot"
+    }
 }
 
 
 #self-img-container {
-  height: var(--project-item-max-height);
   border: 2px solid #666;
   overflow: scroll;
 }
@@ -134,10 +153,6 @@ img.icon {
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin: 1em;
-}
-#self-img-container noscript p {
-  font-size: 1.5em;
 }
 
 #self-img-container img {
