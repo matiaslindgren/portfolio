@@ -64,7 +64,7 @@ img.icon {
   grid-area: video;
 }
 
-@media screen and (max-width: 999px) {
+@media (max-width: 999px) {
   .project-item > .screenshot {
     grid-area: screenshot;
     display: flex;
@@ -75,7 +75,7 @@ img.icon {
     display: unset;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .project-item > .screenshot {
     grid-area: screenshot;
   }
@@ -126,7 +126,7 @@ img.icon {
     "screenshot"
     "tech-list"
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .project-item {
     grid-column-gap: 10px;
     grid-template-rows: auto 40px auto fit-content(40px) 1fr;
