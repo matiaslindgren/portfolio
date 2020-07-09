@@ -15,7 +15,7 @@ render-html:
 
 copy-static:
 	cp -v node_modules/dom-to-image/dist/dom-to-image.min.js $(BUILD_DIR)/third_party/dom-to-image.min.js \
-		&& cp -v src/main.{js,css} $(BUILD_DIR) \
+		&& cp -v src/error.html src/main.{js,css} $(BUILD_DIR) \
 		&& cp -rv img fonts $(BUILD_DIR)
 
 download-fonts:
