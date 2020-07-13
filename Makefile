@@ -1,3 +1,4 @@
+SHELL=/bin/bash
 BUILD_DIR=build
 
 .PHONY: makedirs render-html copy-static all clean download-fonts
