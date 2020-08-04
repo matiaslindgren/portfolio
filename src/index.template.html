@@ -58,8 +58,10 @@
     <title>Portfolio</title>
     <link href="img/man.png" rel="icon">
     <link href="main.css" rel="stylesheet">
+    {#
     <script src="third_party/dom-to-image.min.js"></script>
     <script src="main.js"></script>
+    #}
   </head>
 
   <body>
@@ -108,6 +110,7 @@ All components are implemented as Docker containers for easier dependency manage
       {{ tech_list(techs.grpc_url_fetcher) }}
     </div>
 
+    {#
     <div class="project-item">
       <h2 class="title">Portfolio</h2>
       {{ url_list(urls.portfolio) }}
@@ -123,6 +126,7 @@ This page.
       </div>
       {{ tech_list(techs.portfolio) }}
     </div>
+    #}
 
     <h1 class="year">2019</h1>
 
