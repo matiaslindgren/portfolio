@@ -75,6 +75,22 @@
     <h1 class="year">2020</h1>
 
     <div class="project-item">
+      <h2 class="title">Debian package info viewer</h2>
+      {{ url_list(urls.debian_version_info) }}
+      <div class="content">
+        <p>
+Simple, stateless web backend for parsing Debian package info status files (e.g. <code>/var/lib/dpkg/status</code>) and rendering them as HTML.
+Written in Python using only standard library packages.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="Screenshot of a simple, unstyled HTML list of Debian package names."
+             src="img/debian_version_info.png">
+      </div>
+      {{ tech_list(techs.debian_version_info) }}
+    </div>
+
+    <div class="project-item">
       <h2 class="title">Spoken language identification toolbox: <code>lidbox</code></h2>
       {{ url_list(urls.lidbox) }}
       <div class="content">
