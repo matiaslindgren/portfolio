@@ -54,6 +54,11 @@ techs:
     - https://flask.palletsprojects.com/en/1.1.x/
   - - Celery
     - https://docs.celeryproject.org/en/v4.4.6/
+  code_rain:
+  - - Python
+    - https://docs.python.org/3.6/
+  - - curses
+    - ''
   spaghetti_search:
   - - Python
     - https://docs.python.org/3.6/
@@ -111,6 +116,8 @@ urls:
     demo: .
   celerykube:
     github: https://github.com/matiaslindgren/celery-kubernetes-example
+  code_rain:
+    github: https://github.com/matiaslindgren/code-rain
   spaghetti_search:
     github: https://github.com/matiaslindgren/spaghetti-search
   satellite_routes:
