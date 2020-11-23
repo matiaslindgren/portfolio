@@ -9,10 +9,10 @@ techs:
   - - HTML5
     - ''
   cuda_memory_access_recorder:
-  - - C++14
+  - - C++17
     - ''
   - - CUDA
-    - https://docs.nvidia.com/cuda/archive/10.1/
+    - https://docs.nvidia.com/cuda/archive/11.1.1
   - - JavaScript
     - ''
   - - HTML5
@@ -28,7 +28,7 @@ techs:
   - - Python
     - https://docs.python.org/3.8/
   - - TensorFlow
-    - https://www.tensorflow.org/api/r2.2
+    - https://www.tensorflow.org/api/r2.3
   parallel_rust_cpp:
   - - C++17
     - ''
@@ -102,7 +102,7 @@ urls:
   lidbox:
     github: https://github.com/matiaslindgren/lidbox
     demo: https://users.aalto.fi/~lindgrm1/lid-demo/
-    writing: http://urn.fi/URN:NBN:fi:aalto-202006213891
+    writing: https://www.isca-speech.org/archive/Interspeech_2020/abstracts/2706.html
   parallel_rust_cpp:
     github: https://github.com/parallel-rust-cpp/shortcut-comparison
     writing: https://parallel-rust-cpp.github.io/
@@ -127,7 +127,7 @@ urls:
     demo: https://debian-version-info.herokuapp.com
 
 aalto_url: https://www.aalto.fi/en
-hello_there_url: https://www.youtube.com/watch?v=eaEMSKzqGAg
+aalto_msc_thesis: http://urn.fi/URN:NBN:fi:aalto-202006213891
 apache_2_license_link: '<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a>'
 flaticon_link: '<a href="https://www.flaticon.com/" title="Flaticon">flaticon</a>'
 roboto_font_link: '<a href="https://fonts.google.com/specimen/Roboto+Slab">"Roboto Slab"</a>'
