@@ -95,6 +95,9 @@ techs:
     - https://docs.python.org/3.7/
   - - HTML
     - ''
+  ghht:
+  - - Python
+    - https://docs.python.org/3.8/
 
 urls:
   cuda_memory_access_recorder:
@@ -132,9 +135,12 @@ urls:
   debian_version_info:
     github: https://github.com/matiaslindgren/debian-version-info-app
     demo: https://debian-version-info.herokuapp.com
+  ghht:
+    github: https://github.com/matiaslindgren/ghht
 
 aalto_url: https://www.aalto.fi/en
 aalto_msc_thesis: http://urn.fi/URN:NBN:fi:aalto-202006213891
 apache_2_license_link: '<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0.</a>'
 flaticon_link: '<a href="https://www.flaticon.com/" title="Flaticon">flaticon</a>'
 roboto_font_link: '<a href="https://fonts.google.com/specimen/Roboto+Slab">"Roboto Slab"</a>'
+tiny_font_link: '<a href="https://www.1001fonts.com/tiny-font.html">"Tiny"</a>'

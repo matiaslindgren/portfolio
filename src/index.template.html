@@ -73,6 +73,26 @@
     <h1 class="year">2020</h1>
 
     <div class="project-item">
+      <h2 class="title">GitHub Heatmap Text</h2>
+      {{ url_list(urls.ghht) }}
+      <div class="content">
+        <p>
+Write text on the GitHub contribution heatmap by autogenerating commits.
+        </p>
+        <br>
+        <p>
+Each character of the input text is mapped to (x, y) coordinates, defined by the corresponding {{ tiny_font_link }} font glyph, and then to timestamps where x is weeks and y is days.
+Git commits are then generated at each timestamp to "render" the text.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img alt="GitHub contribution heatmap with a commit pattern that spells out 'HELLO GITHUB' in capital letters"
+             src="img/ghht.png">
+      </div>
+      {{ tech_list(techs.ghht) }}
+    </div>
+
+    <div class="project-item">
       <h2 class="title">Debian package info viewer</h2>
       {{ url_list(urls.debian_version_info) }}
       <div class="content">
@@ -320,6 +340,7 @@ This was part of a larger effort where I rewrote the grading pipeline of an algo
         <li>Octocat logo made by <a href="https://github.com/logos">GitHub</a></li>
         <li>Earth from space texture made by <a href="https://visibleearth.nasa.gov/collection/1484/blue-marble">NASA</a></li>
         <li>{{ roboto_font_link}} font made by Christian Robertson, licensed under {{ apache_2_license_link }}</li>
+        <li>{{ tiny_font_link }} font made by Matthew Welch</li>
         <li>All other images, graphs, and visualizations are my own</li>
       </ul>
     </footer>
