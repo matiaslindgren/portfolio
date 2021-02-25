@@ -49,18 +49,20 @@
 </div>
 {%- endmacro -%}
 
+{%- macro inline_video_attrs() -%}
+loop controls playsinline muted autoplay
+{%- endmacro -%}
+
 <!DOCTYPE HTML>
 <html lang="en">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Code project portfolio of Matias Lindgren.">
     <title>Portfolio</title>
     <link href="img/man.png" rel="icon">
     <link href="main.css" rel="stylesheet">
-    {#
-    <script src="main.js"></script>
-    #}
   </head>
 
   <body>
@@ -109,6 +111,17 @@ Written in Python using only standard library packages.
     </div>
 
     <div class="project-item">
+      <h2 class="title">Portfolio</h2>
+      {{ url_list(urls.portfolio) }}
+      <div class="content">
+        <p>
+This page.
+        </p>
+      </div>
+      {{ tech_list(techs.portfolio) }}
+    </div>
+
+    <div class="project-item">
       <h2 class="title">Spoken language identification toolbox: <code>lidbox</code></h2>
       {{ url_list(urls.lidbox) }}
       <div class="content">
@@ -143,8 +156,10 @@ All components are implemented as Docker containers for easier dependency manage
         </p>
       </div>
       <div class="screenshot">
-        <img alt="Animated architecture sketch showing the different stages of the bi-directional stream API from the point of view of the server and clients."
-             src="img/grpc.gif">
+        <video {{ inline_video_attrs() }}
+          alt="Animated architecture sketch showing the different stages of the bi-directional stream API from the point of view of the server and clients.">
+          <source src="img/grpc.webm" type="video/webm">
+        </video>
       </div>
       {{ tech_list(techs.grpc_url_fetcher) }}
     </div>
@@ -189,12 +204,14 @@ The animations displayed here show two memory access patterns, where the slower 
       </div>
       <div class="screenshot">
         <div class="screenshot-pair">
-          <img alt="2 dimensional animation of a slow GPU memory access pattern into a small matrix"
-               class="left"
-               src="img/cuda-memory-access-recorder-v0.gif">
-          <img alt="2 dimensional animation of a faster GPU memory access pattern into a small matrix"
-               class="right"
-               src="img/cuda-memory-access-recorder-v1.gif">
+          <video {{ inline_video_attrs() }}
+            alt="2 dimensional animation of a slow GPU memory access pattern into a small matrix">
+                 <source src="img/cuda-memory-access-recorder-v0.webm" type="video/webm">
+          </video>
+          <video {{ inline_video_attrs() }}
+            alt="2 dimensional animation of a faster GPU memory access pattern into a small matrix">
+                 <source src="img/cuda-memory-access-recorder-v1.webm" type="video/webm">
+          </video>
         </div>
       </div>
       {{ tech_list(techs.cuda_memory_access_recorder) }}
@@ -211,8 +228,10 @@ This simulator can be used for demonstrating simple GPU performance aspects such
         </p>
       </div>
       <div class="screenshot">
-        <img alt="2 dimensional animation of a simulated GPU memory access pattern with highlighted CUDA code that shows the line of code being executed"
-             src="img/cuda-animations.gif">
+        <video {{ inline_video_attrs() }}
+          alt="2 dimensional animation of a simulated GPU memory access pattern with highlighted CUDA code that shows the line of code being executed">
+               <source src="img/cuda-animations.webm" type="video/webm">
+        </video>
       </div>
       {{ tech_list(techs.cuda_animations) }}
     </div>
@@ -263,8 +282,10 @@ A result from avoiding real work for a few hours.
         </p>
       </div>
       <div class="screenshot">
-        <img alt="Black screen with vertical columns of green characters moving downwards at different speeds. Mimics the code rain animation seen in the Matrix movies."
-             src="img/code-rain.gif">
+        <video {{ inline_video_attrs() }}
+          alt="Black screen with vertical columns of green characters moving downwards at different speeds. Mimics the code rain animation seen in the Matrix movies.">
+          <source src="img/code-rain.webm" type="video/webm">
+        </video>
       </div>
       {{ url_list(urls.code_rain) }}
     </div>

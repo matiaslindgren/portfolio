@@ -116,7 +116,6 @@ urls:
     writing: https://parallel-rust-cpp.github.io/
   portfolio:
     github: https://github.com/matiaslindgren/portfolio
-    demo: .
   celerykube:
     github: https://github.com/matiaslindgren/celery-kubernetes-example
   code_rain:
