@@ -15,7 +15,7 @@ render-html:
 	@python3 scripts/build.py src/config.yaml src/index.template.html $(BUILD_DIR)/index.html
 
 copy-static:
-	@cp -v src/{error.html,main.css} $(BUILD_DIR)
+	@cp -v robots.txt src/{error.html,main.css} $(BUILD_DIR)
 	@cp -rv img fonts $(BUILD_DIR)
 
 download-fonts:
@@ -24,5 +24,6 @@ download-fonts:
 	@rm roboto-slab.zip
 
 deploy:
+	@if [[ -z "${FIREBASE_PROJECT_ID}" ]]; then echo FIREBASE_PROJECT_ID must be set && exit 1; fi
 	@firebase login
 	@firebase deploy --project ${FIREBASE_PROJECT_ID}
