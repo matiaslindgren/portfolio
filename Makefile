@@ -15,7 +15,7 @@ render-html:
 	@python3 scripts/build.py src/config.yaml src/index.template.html $(BUILD_DIR)/index.html
 
 copy-static:
-	@cp -v robots.txt src/{error.html,main.css} $(BUILD_DIR)
+	@cp -v robots.txt src/{404.html,main.css} $(BUILD_DIR)
 	@cp -rv img fonts $(BUILD_DIR)
 
 download-fonts:
