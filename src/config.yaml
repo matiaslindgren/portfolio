@@ -98,6 +98,9 @@ techs:
   ghht:
   - - Python
     - https://docs.python.org/3.8/
+  aoc2020:
+  - - Go
+    - https://golang.org/doc/go1.15
 
 urls:
   cuda_memory_access_recorder:
@@ -136,6 +139,8 @@ urls:
     demo: https://debian-version-info.herokuapp.com
   ghht:
     github: https://github.com/matiaslindgren/ghht
+  aoc2020:
+    github: https://github.com/matiaslindgren/AoC2020
 
 aalto_url: https://www.aalto.fi/en
 aalto_msc_thesis: http://urn.fi/URN:NBN:fi:aalto-202006213891
@@ -143,3 +148,4 @@ apache_2_license_link: '<a href="http://www.apache.org/licenses/LICENSE-2.0">Apa
 flaticon_link: '<a href="https://www.flaticon.com/" title="Flaticon">flaticon</a>'
 roboto_font_link: '<a href="https://fonts.google.com/specimen/Roboto+Slab">"Roboto Slab"</a>'
 tiny_font_link: '<a href="https://www.1001fonts.com/tiny-font.html">"Tiny"</a>'
+aoc2020_link: '<a href="https://adventofcode.com/2020">Advent of Code 2020</a>'
