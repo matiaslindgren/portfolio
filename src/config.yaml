@@ -147,7 +147,6 @@ urls:
     github: https://github.com/matiaslindgren/AoC2020
   robotini_ddpg:
     github: https://github.com/matiaslindgren/robotini-ddpg
-    demo: https://matiaslindgren.fi/demos/robotini-ddpg
 
 aalto_url: https://www.aalto.fi/en
 aalto_msc_thesis: http://urn.fi/URN:NBN:fi:aalto-202006213891
