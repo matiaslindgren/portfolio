@@ -23,7 +23,7 @@ download-fonts:
 	@unzip roboto-slab.zip -d fonts
 	@rm roboto-slab.zip
 
-deploy:
+deploy: all
 	@if [[ -z "${FIREBASE_PROJECT_ID}" ]]; then echo FIREBASE_PROJECT_ID must be set && exit 1; fi
 	@firebase login
 	@firebase deploy --project ${FIREBASE_PROJECT_ID}
