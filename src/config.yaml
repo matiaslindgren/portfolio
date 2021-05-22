@@ -161,39 +161,39 @@ robotini_racing_simulator_link: '<a href="https://github.com/mikkomultanen/Robot
 videos:
   code_rain:
     url: 'https://user-images.githubusercontent.com/11295697/119232718-e92f1a00-bb2e-11eb-9ba8-32842e4d8196.mp4'
-    alt: >
+    alt: >-
       Black screen with vertical columns of random green characters moving downwards at different speeds.
       Mimics the code rain animation seen in the Matrix movies.
 
   robotini_ddpg_exploring:
     url: 'https://user-images.githubusercontent.com/11295697/119233302-0f55b980-bb31-11eb-931a-aec0a1a19842.mp4'
-    alt: >
+    alt: >-
       Top-down view of the simulator with 6 cars driving mostly correctly,
       occasionally crashing into the wall.
 
   robotini_ddpg_web_ui:
     url: 'https://user-images.githubusercontent.com/11295697/119233343-36ac8680-bb31-11eb-8fbf-e9f71f8e90d6.mp4'
-    alt: >
+    alt: >-
       Web user interface showing 4 changing JSON dumps of training state and
       a live feed from 4 car cameras during exploration.
 
   grpc_url_fetcher:
     url: 'img/grpc.mp4'
-    alt: >
+    alt: >-
       Animated architecture sketch showing the different stages of the bi-directional stream API
       from the point of view of the server and clients.
 
   cuda_recorder_v0:
     url: 'img/cuda-memory-access-recorder-v0.mp4'
-    alt: >
+    alt: >-
       2 dimensional animation of a slow GPU memory access pattern into a small matrix.
 
   cuda_recorder_v1:
     url: 'img/cuda-memory-access-recorder-v1.mp4'
-    alt: >
+    alt: >-
       2 dimensional animation of a faster GPU memory access pattern into a small matrix.
 
   cuda_animations:
     url: 'img/cuda-animations.mp4'
-    alt: >
+    alt: >-
       2 dimensional animation of a simulated GPU memory access pattern with highlighted CUDA code that shows the line of code being executed.
