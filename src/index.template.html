@@ -132,10 +132,7 @@ All components are implemented as Docker containers for easier dependency manage
         </p>
       </div>
       <div class="screenshot">
-        <video {{ inline_video_attrs() }}
-          alt="Animated architecture sketch showing the different stages of the bi-directional stream API from the point of view of the server and clients.">
-          <source src="img/grpc.webm" type="video/webm">
-        </video>
+        {{ video_mp4(videos.grpc_url_fetcher.url, videos.grpc_url_fetcher.alt) }}
       </div>
       {{ tech_list(techs.grpc_url_fetcher) }}
     </div>
@@ -180,14 +177,8 @@ The animations displayed here show two memory access patterns, where the slower 
       </div>
       <div class="screenshot">
         <div class="screenshot-pair">
-          <video {{ inline_video_attrs() }}
-            alt="2 dimensional animation of a slow GPU memory access pattern into a small matrix">
-                 <source src="img/cuda-memory-access-recorder-v0.webm" type="video/webm">
-          </video>
-          <video {{ inline_video_attrs() }}
-            alt="2 dimensional animation of a faster GPU memory access pattern into a small matrix">
-                 <source src="img/cuda-memory-access-recorder-v1.webm" type="video/webm">
-          </video>
+          {{ video_mp4(videos.cuda_recorder_v0.url, videos.cuda_recorder_v0.alt) }}
+          {{ video_mp4(videos.cuda_recorder_v1.url, videos.cuda_recorder_v1.alt) }}
         </div>
       </div>
       {{ tech_list(techs.cuda_memory_access_recorder) }}
@@ -204,10 +195,7 @@ This simulator can be used for demonstrating simple GPU performance aspects such
         </p>
       </div>
       <div class="screenshot">
-        <video {{ inline_video_attrs() }}
-          alt="2 dimensional animation of a simulated GPU memory access pattern with highlighted CUDA code that shows the line of code being executed">
-               <source src="img/cuda-animations.webm" type="video/webm">
-        </video>
+        {{ video_mp4(videos.cuda_animations.url, videos.cuda_animations.alt) }}
       </div>
       {{ tech_list(techs.cuda_animations) }}
     </div>

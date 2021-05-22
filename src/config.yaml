@@ -176,3 +176,24 @@ videos:
     alt: >
       Web user interface showing 4 changing JSON dumps of training state and
       a live feed from 4 car cameras during exploration.
+
+  grpc_url_fetcher:
+    url: 'img/grpc.mp4'
+    alt: >
+      Animated architecture sketch showing the different stages of the bi-directional stream API
+      from the point of view of the server and clients.
+
+  cuda_recorder_v0:
+    url: 'img/cuda-memory-access-recorder-v0.mp4'
+    alt: >
+      2 dimensional animation of a slow GPU memory access pattern into a small matrix.
+
+  cuda_recorder_v1:
+    url: 'img/cuda-memory-access-recorder-v1.mp4'
+    alt: >
+      2 dimensional animation of a faster GPU memory access pattern into a small matrix.
+
+  cuda_animations:
+    url: 'img/cuda-animations.mp4'
+    alt: >
+      2 dimensional animation of a simulated GPU memory access pattern with highlighted CUDA code that shows the line of code being executed.
