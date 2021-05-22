@@ -1,0 +1,52 @@
+{%- macro tech_list(techs) -%}
+<div class="tech-list">
+{% for name, url in techs %}
+  <span>
+  {% if url -%}
+  <a href="{{ url }}">{{ name }}</a>
+  {%- else -%}
+  {{ name -}}
+  {% endif -%}
+  {% if loop.revindex > 1 -%}
+  ,
+  {% endif %}
+  </span>
+{% endfor %}
+</div>
+{%- endmacro -%}
+
+{%- macro url_list(urls) -%}
+<div class="url-list">
+  {% if urls.github is defined %}
+  <div class="source-code">
+    <a href="{{ urls.github }}">
+      <img alt="link to the GitHub repository of this project"
+           class="icon"
+           src="img/github-logo.png">
+    </a>
+  </div>
+  {% endif %}
+  {% if urls.demo is defined %}
+  <div class="interactive-demo">
+    <a href="{{ urls.demo }}">
+      <img alt="link to an interactive or recorded demo of this project"
+           class="icon"
+           src="img/play-button.png">
+    </a>
+  </div>
+  {% endif %}
+  {% if urls.writing is defined %}
+  <div class="writing">
+    <a href="{{ urls.writing }}">
+      <img alt="link to an article, blog, or written work related to this project"
+           class="icon"
+           src="img/draw.png">
+    </a>
+  </div>
+  {% endif %}
+</div>
+{%- endmacro -%}
+
+{%- macro inline_video_attrs() -%}
+loop controls playsinline muted autoplay
+{%- endmacro -%}
