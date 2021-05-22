@@ -1,11 +1,13 @@
 import jinja2
 import yaml
 
+template_dirs = ['.', 'src']
+
 def write_index_html(jinja2_config, jinja2_template, output_html_path):
     with open(jinja2_config) as f:
         config = yaml.safe_load(f.read())
     env = jinja2.Environment(
-            loader=jinja2.FileSystemLoader('.'),
+            loader=jinja2.FileSystemLoader(template_dirs),
             undefined=jinja2.StrictUndefined,
             cache_size=0,
             trim_blocks=True,

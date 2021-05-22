@@ -1,5 +1,5 @@
 {# This is a Jinja2 template that is rendered to produce the final index.html #}
-{% from 'macros.j2' import url_list, tech_list, inline_video_attrs %}
+{% from 'macros.j2' import url_list, tech_list, video_mp4 %}
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -31,14 +31,8 @@
       </div>
       <div class="screenshot">
         <div class="screenshot-pair">
-          <video {{ inline_video_attrs() }}
-            alt="Top-down view of the simulator with 6 cars driving mostly correctly, occasionally crashing into the wall">
-                 <source src="img/robotini-ddpg-exploring.webm" type="video/webm">
-          </video>
-          <video {{ inline_video_attrs() }}
-            alt="Web user interface showing a JSON dump of training state and a live feed from the cars' cameras during exploration.">
-                 <source src="img/robotini-ddpg-web-ui.webm" type="video/webm">
-          </video>
+          {{ video_mp4(videos.robotini_ddpg_exploring.url, videos.robotini_ddpg_exploring.alt) }}
+          {{ video_mp4(videos.robotini_ddpg_web_ui.url, videos.robotini_ddpg_web_ui.alt) }}
         </div>
       </div>
       {{ tech_list(techs.robotini_ddpg) }}
@@ -264,10 +258,7 @@ A result from avoiding real work for a few hours.
         </p>
       </div>
       <div class="screenshot">
-        <video {{ inline_video_attrs() }}
-          alt="Black screen with vertical columns of green characters moving downwards at different speeds. Mimics the code rain animation seen in the Matrix movies.">
-          <source src="img/code-rain.webm" type="video/webm">
-        </video>
+        {{ video_mp4(videos.code_rain.url, videos.code_rain.alt) }}
       </div>
       {{ url_list(urls.code_rain) }}
     </div>

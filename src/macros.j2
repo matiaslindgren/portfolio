@@ -47,6 +47,8 @@
 </div>
 {%- endmacro -%}
 
-{%- macro inline_video_attrs() -%}
-loop controls playsinline muted autoplay
+{%- macro video_mp4(url, alt) -%}
+<video loop controls playsinline muted autoplay alt={{ alt }}>
+  <source src="{{ url }}" type="video/mp4">
+</video>
 {%- endmacro -%}
