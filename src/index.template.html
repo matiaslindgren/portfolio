@@ -30,10 +30,16 @@
         </p>
       </div>
       <div class="screenshot">
-        <video {{ inline_video_attrs() }}
-          alt="">
-          <source src="img/robotini-ddpg.webm" type="video/webm">
-        </video>
+        <div class="screenshot-pair">
+          <video {{ inline_video_attrs() }}
+            alt="Top-down view of the simulator with 6 cars driving mostly correctly, occasionally crashing into the wall">
+                 <source src="img/robotini-ddpg-exploring.webm" type="video/webm">
+          </video>
+          <video {{ inline_video_attrs() }}
+            alt="Web user interface showing a JSON dump of training state and a live feed from the cars' cameras during exploration.">
+                 <source src="img/robotini-ddpg-web-ui.webm" type="video/webm">
+          </video>
+        </div>
       </div>
       {{ tech_list(techs.robotini_ddpg) }}
     </div>
