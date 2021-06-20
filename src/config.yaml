@@ -106,6 +106,16 @@ techs:
     - https://www.tensorflow.org/api/r2.4
   - - TensorFlow Agents
     - https://www.tensorflow.org/agents/api_docs/python/tf_agents
+  bitmatch:
+  - - C
+    - ''
+  - - C++17
+    - ''
+  hft_risk_server:
+  - - C++17
+    - ''
+  - - TCP
+    - ''
 
 urls:
   cuda_memory_access_recorder:
@@ -147,6 +157,11 @@ urls:
     github: https://github.com/matiaslindgren/AoC2020
   robotini_ddpg:
     github: https://github.com/matiaslindgren/robotini-ddpg
+  bitmatch:
+    github: https://github.com/matiaslindgren/bitmatch
+  hft_risk_server:
+    github: https://github.com/matiaslindgren/hft-risk-server
+
 
 aalto_url: https://www.aalto.fi/en
 aalto_msc_thesis: http://urn.fi/URN:NBN:fi:aalto-202006213891
